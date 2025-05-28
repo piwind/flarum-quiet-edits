@@ -1,5 +1,5 @@
 <?php
-namespace TheTurk\QuietEdits\Listeners;
+namespace Piwind\QuietEdits\Listeners;
 
 use Carbon\Carbon;
 use Flarum\Post\Event\Revised as PostRevised;
@@ -7,8 +7,8 @@ use Flarum\Post\Event\Saving as PostSaving;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;
 use Jfcherng\Diff\DiffHelper;
-use TheTurk\QuietEdits\Events\PostWasRevisedLoudly;
-use TheTurk\QuietEdits\Events\PostWasRevisedQuietly;
+use Piwind\QuietEdits\Events\PostWasRevisedLoudly;
+use Piwind\QuietEdits\Events\PostWasRevisedQuietly;
 
 class PostActions
 {
@@ -71,8 +71,8 @@ class PostActions
 
         $differOptions = [
             'context' => 0,
-            'ignoreCase' => $this->settings->get('the-turk-quiet-edits.ignore_case_differences', true),
-            'ignoreWhitespace' => $this->settings->get('the-turk-quiet-edits.ignore_whitespace_differences', true),
+            'ignoreCase' => $this->settings->get('piwind-quiet-edits.ignore_case_differences', true),
+            'ignoreWhitespace' => $this->settings->get('piwind-quiet-edits.ignore_whitespace_differences', true),
         ];
 
         $differ = DiffHelper::calculate(
@@ -84,7 +84,7 @@ class PostActions
 
         $diff = json_decode($differ, true);
 
-        $gracePeriod = floor($this->settings->get('the-turk-quiet-edits.grace_period', '120'));
+        $gracePeriod = floor($this->settings->get('piwind-quiet-edits.grace_period', '120'));
         $creationTime = ($this->oldPost['edited_at'] !== null
                           ? new Carbon($this->oldPost['edited_at'])
                           : new Carbon($post->created_at)

@@ -6,20 +6,13 @@
  * LICENSE: For the full copyright and license information,
  * please view the LICENSE.md file that was distributed
  * with this source code.
- *
- * @package    the-turk/flarum-quiet-edits
- * @author     Hasan Özbey <hasanoozbey@gmail.com>
- * @copyright  2020
- * @license    The MIT License
- * @version    Release: 0.1.3
- * @link       https://github.com/the-turk/flarum-quiet-edits
  */
 
-namespace TheTurk\QuietEdits;
+namespace Piwind\QuietEdits;
 
 use Flarum\Extend;
 use Illuminate\Contracts\Events\Dispatcher;
-use TheTurk\QuietEdits\Listeners\PostActions;
+use Piwind\QuietEdits\Listeners\PostActions;
 
 return [
     (new Extend\Frontend('admin'))

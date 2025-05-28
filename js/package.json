@@ -1,5 +1,5 @@
 {
-  "name": "@the-turk/flarum-quiet-edits",
+  "name": "@piwind/flarum-quiet-edits",
   "description": "Do not mark posts as Edited based on some conditions.",
   "license": "MIT",
   "version": "0.1.3",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/the-turk/flarum-quiet-edits.git"
+    "url": "git://github.com/piwind/flarum-quiet-edits.git"
   },
   "scripts": {
     "dev": "webpack --mode development --watch",

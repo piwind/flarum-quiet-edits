@@ -1,5 +1,5 @@
 <?php
-namespace TheTurk\QuietEdits\Events;
+namespace Piwind\QuietEdits\Events;
 
 use Flarum\Post\CommentPost;
 use Flarum\User\User;

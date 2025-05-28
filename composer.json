@@ -1,5 +1,5 @@
 {
-  "name": "the-turk/flarum-quiet-edits",
+  "name": "piwind/flarum-quiet-edits",
   "description": "Do not mark posts as Edited based on some conditions.",
   "keywords": [
     "flarum",
@@ -8,14 +8,22 @@
   ],
   "type": "flarum-extension",
   "license": "MIT",
-  "authors": [{
+  "authors": [
+    {
+      "name": "piwind",
+      "homepage": "https://github.com/piwind",
+      "email": "piwind95@outlook.com",
+      "role": "Developer"
+    },
+    {
     "name": "Hasan Özbey",
     "email": "hasanoozbey@gmail.com",
     "homepage": "https://github.com/the-turk"
-  }],
+    }
+  ],
   "support": {
-    "issues": "https://github.com/the-turk/flarum-quiet-edits/issues",
-    "source": "https://github.com/the-turk/flarum-quiet-edits"
+    "issues": "https://github.com/piwind/flarum-quiet-edits/issues",
+    "source": "https://github.com/piwind/flarum-quiet-edits"
   },
   "require": {
     "flarum/core": "^1.0.2",
@@ -23,7 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-      "TheTurk\\QuietEdits\\": "src/"
+      "Piwind\\QuietEdits\\": "src/"
     }
   },
   "extra": {
